@@ -26,19 +26,12 @@
             <div class="mb-3">
                 <label  class="form-label">Enter your F,C number :</label>
                 <input type="number" name="num1" class="form-control">
-                <!-- <div class="form-text">89</div> -->
             </div>
-            <!-- <div class="mb-3">
-                <label  class="form-label">Enter your second number</label>
-                <input type="number" name="num2" class="form-control">
-                <div class="form-text">1.00000000000000000000</div>
-            </div> -->
             <div class="mb-3">
             <select name="ope" class="form-select" >
             <option selected>Open this select menu</option>
             <option value="f" >F</option>
             <option value="c" >C</option>
-            <!-- <option  value="multi">multi</option> -->
             </select>
             </div>
             <div class="mb-3">
@@ -49,9 +42,7 @@
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $val1 =$_POST["num1"];
-                // $val2 =$_POST["num2"];
                 $val3 =$_POST["ope"];
-                // var_dump($val3);
                 switch ($val3) {
                     case "f":
                     $results = ($val1-32)*5/9;
@@ -61,10 +52,6 @@
                     $results = ($val1*1.8)+32;
                     echo "Restult:$results";
                     break;
-                    // case "multi":
-                    // $results = $val1*$val2;
-                    // echo "Restult:$results";
-                    // break;
                     default:
                     echo "No Result";
                 }
